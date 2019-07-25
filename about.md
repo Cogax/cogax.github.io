@@ -5,6 +5,8 @@ title: About
 
 Hello.
 
-This will be your About page. Anything about you, it should be written here in details. You may describe your bio here like who you are, what you do, your intention, social site hyperlinks and how people can contact you, etc.
+Hi, mein Name ist **Andreas Gyr** und ich verwende diese Seite um meine Gedanken über diverse Disziplinen der Softwareentwicklung zu teilen.
 
-**Less is more..**
+Meine Interessensgebiete liegen primär auf der Software- Architektur und Design sowie der agilen Softwareentwicklung. Meine bisherigen Erfahrungen sind geprägt von Softwareentwicklungs- Prinzipien und Praktiken, Scrum, C# .NET sowie der Webentwicklung.
+
+***Consistency reduces Complexity.***
