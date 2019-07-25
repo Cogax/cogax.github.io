@@ -6,7 +6,7 @@ logo_url:           https://avatars0.githubusercontent.com/u/5551103?v=4 # Get i
 
 # Site Settings
 url:                https://cogax.github.io # main url
-baseurl:            /the-plain
+baseurl:            
 permalink:          /:title # Post permalink
 timezone:           Europe/Zurich # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 mathjax:            true  # enables support for mathjax - set to 'false' to disable
