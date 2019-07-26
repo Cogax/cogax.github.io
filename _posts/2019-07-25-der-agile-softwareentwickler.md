@@ -12,4 +12,4 @@ Meist wird versucht die Vorgehensweise anhand eines des oben genannten Framework
 <div class="divider"></div>
 
 ## Referenzen
-[^1]: [Agiles Manifest](https://agilemanifesto.org/iso/de/manifesto.html)
+[^1]: <a href="https://agilemanifesto.org/iso/de/manifesto.html" target="_blank">Agiles Manifest</a>
