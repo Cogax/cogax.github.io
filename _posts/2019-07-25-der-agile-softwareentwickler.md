@@ -49,6 +49,7 @@ Teamfähigkeit bzw. Teamwork wird leider sehr oft missverstanden. Vielleicht erk
 * PairProgramming
 * Teamwork bedeutet, dass eine aktive Feedbackkultuir zwischen den Mitgliedern lebt. Jeder kann mit Kritik umgehen uns weiss diese zu verarbeiten. Jeder ist Einsichtig und nimmt Kritik entgegen. Jeder kann seine Meinung äussern und vertreten. Niemand ist rechthaberisch.
 * Teamwork beduetet nicht, alle arbeit auf sich zu ziehen und diese dann zu delegieren. Ein oft beobachtetes Phänomen wenn man neu in einem Team zusammenarbeiten soll. Falls man durch mehrwissen gewisse Arbeiten auf sich zieht muss man damit uzugehen wissen. Man muss als Leader agieren und andere Mitglieder dabei unterstützen diese Fähigkeiten ebenfalls zu erlernen. Man ist verpflichtet, seine eigene Kapazität im Griff zu haben.
+  * Das Problem ist höufig, dass solche Personen sich bei der Aufwand (Story-Point) Schätzung durchsetzen. Da das Know-How bei ihnen höher ist, wird die Arbeit oft nach ihrem Masse geschötzt und nich nach dem Maas des gesamten Teams. Desshalb sind dann diese Personen innerhalb einer Iteration höufig unter Druck.
 
 Die Zeiten, als ein einzelner Programmierer das Know-How über die gesammte Software hat und diese alleine nach seinen Vorstellungen von Architektur und Design entwickelt ist vorbei. Dies ist nicht nur nicht Business-Orientiert, es skaliert nicht und ist kein langfristiger Ansatz. Solche Software wird früher oder später neu geschrieben werden müssen.
 
