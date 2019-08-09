@@ -1,12 +1,16 @@
 ul.toc {
     padding-left: 0;
     list-style: none;
-    margin: 10px 0;
+    margin: 0;
 
     ul {
         padding-left: 15px;
         margin: 0;
         list-style: none;
+    }
+
+    li {
+        margin-bottom: 0;
     }
 }
 
@@ -19,7 +23,7 @@ p.teaser {
     font-weight: bold;
 }
 
-#content ul {
+ul {
     margin: 0;
 
     li {

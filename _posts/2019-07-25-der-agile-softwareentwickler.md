@@ -27,6 +27,8 @@ Die Fähigkeit im Team arbeiten zu können muss jeder beteiligte einer agilen Um
 > *[..]* <br />
 > Die besten Architekturen, Anforderungen und Entwürfe entstehen durch selbstorganisierte Teams. 
 
+
+### Aus der Praxis
 Teamfähigkeit bzw. Teamwork wird leider sehr oft missverstanden. Vielleicht erkennt man sowas erst wenn man selbst einige Zeit in einem selbstorganisierten Team mitgearbeitet hat. Ich habe mich schwergetan, eine einheitliche Definition für Teamwork auszuarbeiten. Stattdessen habe ich einige Punkte aufgelistet, was für mich Teamwork beduetet, bzw. eben nicht:
 * Teamwork bedeutet nicht, Aufgaben direkt an Teammitglieder zu vergeben.
   * Alle Teammitglieder sollen stets informiert sein wer was macht. Aufgaben sollen also ebenfalls im Team verteilt werden. Im Idealfall organisiert sich dabei das Team selbst und die Aufgaben werden vom Team selbst verteilt.
@@ -90,6 +92,9 @@ Der Begriff "Domain Driven Design" welcher vom gleichnamigen Buch von Eric Evans
 
 ## Empirisches Mindset
 Ein agiler Softwareentwickler entwickelt nicht nur die Software im Sinne eines empirischen Ansatzes sondern sollte auch einen solchen Mindset haben. Er will das Produkt stets verbessern, dies macht er in kleinen Schritten und reflektiert diese zwischendurch. Genau diese Einstellung sollte er auch zu seinem Handwerk haben. Er will sich stets verbessern, stets neue Sachen und Herangehensweisen lernen. Er kann sein erlerntes Wissen weitergeben aber auch neue Sachen von anderen annehmen. 
+
+### Entwicklermentalitäten
+Erfahrene Entwickler äussern ihre Erfahrung auf verschiedene Arten. Das eine extrem ist, die "sich tendenziell überschätzende" Art und Weise. Für diese Entwickler ist alles relativ einfach umzusetzen. Probleme gibt es nicht nur Lösungen und kaum ist ein Problem andiskutiert wissen diese Entwickler bereits wie man sie am besten angehen und Lösen sollte. Die andere Art und Weise ist die "sich tendentiell unterschätzende". Diese Programmieren sehen überall Herausforderungen. Werden Probleme andiskutiert, so sind für diese Entwickler erstmal nur eine Menge an Problemen zu sehen. Generell denke ich, dass die zweite Art eher für ein agiles Entwicklungsteam geeognet ist. Sie nehmen Probleme ernst, was dazu führt dass sie sich damit auseinandersetzen. Sie hinterfragen die Dinge eher als die Entwickler welche schon die vermeindliche Lösung im Kopf haben. Entwickler die sich in solchen Situationen tendenziell überschätzen neigen dazu, Aufwandschätzungen etc. zu beinflussen. Diskussionen mit Product Owner oder Stakeholder sind zudem nicht so konstruktiv, da viele Lücken in den Anforderungen erst durch nachfragen der Entwickler auftauchen. Das Nachfragen und hinterfragen macht man jedoch nur, wenn man ein Problem sieht, nicht wenn man schon die geeignete Lösung dafür im Kopf hat.
 
 ## Schlussfolgerung
 Ein Agile Entwickler denkt nicht in Projekten oder Meilensteinen. Ein Agiler Entwickler hat stets das Produkt im Fokus und will gute Lösungen für den Anwender entwickeln. Er ist Teamfähig, kann mit verschiedensten Rollen kommunizieren, ist technisch sehr versiert und arbeitet sich in den Fachbereich der Software hinein. All dies macht den Agilen Softwareentwickler zu einem der wertvollsten Personen in einem Unternehmen. Für Unternehmen stellt sich die Frage, wie kommt man an solche Agile Softwareentwickler. Volker Birk erläutert dies in seinem Talk ganz gut "Du musst sie ausbilden, ab und zu bekommst du einen geschenkt"[^4]. 
