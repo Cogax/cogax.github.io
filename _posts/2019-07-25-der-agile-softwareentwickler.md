@@ -6,8 +6,8 @@ Will man von einem traditionellen (wohl Wasserfall orientierten-) Ansatz auf ein
 
 > *[..]* But theory rarely works in practice, and predictability has a devious sister named complexity -- *Jurgen Apelo [^8]*
 
-
 ## Wasserfall vs. Agil
+
 In einem typisch Wasserfall orientiertem Vorgehen ist der Softwareentwickler mehrheitlich in der Entwicklungs-Phase involviert. Im Gegensatz dazu wird er bei einem Agilen Vorgehen in allen Projektphasen vertreten sein. Natürlich bedeutet dies nicht, dass er auf einmal die Anforderungen für das Produkt selbst erhebt und damit die "Requirement Engineers" Arbeitslos macht. Es geht dabei vielmehr darum, dass bei einem Agilen Vorgehen die verschiedenen Diszplinen sehr eng miteinander zusammenarbeiten und dadurch alle daran beteiligten Personen ihr Spektrum erweitern müssen.
 
 ![Minion](/assets/images/waterfall-vs-agile.png)
@@ -20,6 +20,7 @@ Die Agile Vorgehensweise sagt meiner Meinung nämlich vorallem eines aus:
 Im folgenden will ich genauer auf die (meiner Meinung nach) relevantesten Eigenschaften und Fähigkeiten eines Entwicklers im Agilen Umfeld eingehen.
 
 ## Teamfähigkeit
+
 Die Fähigkeit im Team arbeiten zu können muss jeder beteiligte einer agilen Umgebung besitzen, nicht nur der Entwickler. Sieht man sich das Agile Manifest [^1] genauer an, so sieht man, dass gleiche mehrere der dort definierten Werte und Prinzipien darauf abzielen:
 
 > **Individuen und Interaktionen** mehr als Prozesse und Werkzeuge <br />
@@ -27,9 +28,10 @@ Die Fähigkeit im Team arbeiten zu können muss jeder beteiligte einer agilen Um
 > *[..]* <br />
 > Die besten Architekturen, Anforderungen und Entwürfe entstehen durch selbstorganisierte Teams. 
 
+### Was Teamwork nicht ist
 
-### Aus der Praxis
 Teamfähigkeit bzw. Teamwork wird leider sehr oft missverstanden. Vielleicht erkennt man sowas erst wenn man selbst einige Zeit in einem selbstorganisierten Team mitgearbeitet hat. Ich habe mich schwergetan, eine einheitliche Definition für Teamwork auszuarbeiten. Stattdessen habe ich einige Punkte aufgelistet, was für mich Teamwork beduetet, bzw. eben nicht:
+
 * Teamwork bedeutet nicht, Aufgaben direkt an Teammitglieder zu vergeben.
   * Alle Teammitglieder sollen stets informiert sein wer was macht. Aufgaben sollen also ebenfalls im Team verteilt werden. Im Idealfall organisiert sich dabei das Team selbst und die Aufgaben werden vom Team selbst verteilt.
 * Teamwork bedeutet nicht, dass nur ein Mitglied das Wissen über eine Aufgabe hat.
@@ -52,6 +54,11 @@ Teamfähigkeit bzw. Teamwork wird leider sehr oft missverstanden. Vielleicht erk
 * Teamwork bedeutet, dass eine aktive Feedbackkultuir zwischen den Mitgliedern lebt. Jeder kann mit Kritik umgehen uns weiss diese zu verarbeiten. Jeder ist Einsichtig und nimmt Kritik entgegen. Jeder kann seine Meinung äussern und vertreten. Niemand ist rechthaberisch.
 * Teamwork beduetet nicht, alle arbeit auf sich zu ziehen und diese dann zu delegieren. Ein oft beobachtetes Phänomen wenn man neu in einem Team zusammenarbeiten soll. Falls man durch mehrwissen gewisse Arbeiten auf sich zieht muss man damit uzugehen wissen. Man muss als Leader agieren und andere Mitglieder dabei unterstützen diese Fähigkeiten ebenfalls zu erlernen. Man ist verpflichtet, seine eigene Kapazität im Griff zu haben.
   * Das Problem ist höufig, dass solche Personen sich bei der Aufwand (Story-Point) Schätzung durchsetzen. Da das Know-How bei ihnen höher ist, wird die Arbeit oft nach ihrem Masse geschötzt und nich nach dem Maas des gesamten Teams. Desshalb sind dann diese Personen innerhalb einer Iteration höufig unter Druck.
+* Wenn ein Mitglied mit seiner Arbeit fertig ist dann soll er den anderen helfen bevor er tech stories für sich umsetzt
+
+### Was Teamwork ist
+
+### Teamfähigkeit ist eine untypische Eigenschaft für Programmierer
 
 Die Zeiten, als ein einzelner Programmierer das Know-How über die gesammte Software hat und diese alleine nach seinen Vorstellungen von Architektur und Design entwickelt ist vorbei. Dies ist nicht nur nicht Business-Orientiert, es skaliert nicht und ist kein langfristiger Ansatz. Solche Software wird früher oder später neu geschrieben werden müssen.
 
@@ -61,6 +68,7 @@ Im Paper [^7] wurde dies mithilfe von Extreme Programming ziemlich gut zusammeng
 > Die Entwickler und Entwicklerinnen müssen in einem hohen Mass teamfähig sein, da gerade das Entwickeln in Paaren eine hohe Sozialkompetenz voraussetzt. Dies ist insbesondere wichtig, da in XP der Programmierer neben der eigentlichen Programmierung auch für die Aufwandschätzung und für das Erstellen der Tests verantwortlich ist, also Aktivitäten, die immer auch mit den anderen Personen koordiniert werden müssen. Einzelgänger, die nicht über ihre Arbeit diskutieren können oder nicht kritikfähig sind, eignen sich nicht für ein XP-Team. Der Teamerfolg muss in jedem Moment über dem eigenen Erfolg stehen. Ängste sich zu blamieren, veraltete Ansichten zu vertreteten, nutzlos zu werden oder den hohen Anforderungen nicht zu genügen, müssen überwunden werden, um erfolgreich in einem XP-Team mitarbeiten zu können. Dies ist gerade für die Programmierer, die in der Regel nicht besonders kommunikativ sind, eine besondere Herausforderung (vgl. Beck 2003: 141).
 
 ## Kommunikation
+
 Die Anforderungen an die Kommunikationsskills eines Softwareentwicklers verändern sich bei einer Umstellung auf Agil enorm. Während ein Softwareentwickler im klassischen Wasserfall modell quasi "Stupid" die vorgegebenen Anforderungen und Designs implementiert muss er im Agilen Umfeld mit diversen anderen Rollen kommunizieren können. Ob Stakeholder, Auftraggeber, End-User, Product Owner, Scrum Master, Tester, UI-/UX Spezialisten oder anderen Entwicklern - er muss mit ihnen allen Kommunizieren können. Viele dieser Rollen sprechen eine ganz andere Sprache und verstehen oft unter selbem Begriff etwas komplett anderes. Der Entwickler muss mit ihnen allen kommunizieren können, natürlich bekommt er da Untersützung von anderen Rollen (wie Beispielsweise dem Product Owner), trotzdem ist diese Fähigkeit sehr eintscheidend.
 
 > Vielleicht sind Sie "nur ein Programmierer", aber die Fähigkeit, sich mit einem Geschäftskunden in der Sprache seine Branche zu unterhalten, ist für Ihren beruflichen Erfolg lebenswichtig. *[3]*
@@ -73,6 +81,7 @@ Er muss seinen Standpunkt in gewissen Diskussionen klar vertreten können. Gerad
 > When the customer says, "You must do this and this and this," you have to be prepared to discuss which of those items is really necessary and how much of each. *[6]*
 
 ## Technische Exzellenz
+
 Dass ein Softwareentwickler in seiner Programmiersprache fit sein muss wird niemand bestreiten. Natürlich ist dies im Agilen Umfeld nicht anders. Jedoch kommen einige Aspekte hinzu. Da der Entwickler keine fest definierten Vorgaben hat sind plötzlich Kenntnisse und Fähigkeiten in Software- Design und Architektur Pflicht. Es gibt keinen fixen Plan den der Entwickler "nur noch" in Code umwandeln muss[^4]. Im Agilen Manifest stehen ebenfalls einige wichtige Sätze zu dieser Thematik:
 
 > Ständiges Augenmerk auf technische Exzellenz und gutes Design fördert Agilität. <br />
@@ -86,22 +95,27 @@ Ein Agiler Entwickler hat ein Produktorientiertes Denken, ein traditioneller Ent
 Die Technische Exzellenz manifestiert sich jedoch nicht nur im Sourcecode. Es gehört zu den Aufgaben eines Entwicklers Aufwände sowie Risikos zu anfallenden Anforderungen abzuschätzen. Er muss technische Anforderungen vertreten, begrunden und dafür werben können. Er muss sich zudem mit Prinzipien wie Continuous Integration sowie Deployment auskennen, da diese ein Enabler für kurze Feedback-Zyklen und wirkliche Agilität sind.
 
 ## Domänenwissen
+
 Der Beruf Softwareentwickler trägt mit sich, dass man sich immer in zwei Fachbereichen auskennen muss. Der eine ist natürlich der IT- bzw. Software- Fachbereich. Dieser alleine gehört zu den komplexeren. Der jeweils andere ist der Fachbereich, wofür die Software-Lösung entwickelt wird. Da der agile Softwareentwickler sehr nahe mit Rollen des Requirement-Engineering zusammenarbeitet muss er sich auch mehr in die Domäne einarbeiten, als wenn man die konkreten Anforderungen vorgesetzt bekommt. Dies erfordert den Willen sich in eine zum Teil fremde Domäne einzuarbeiten und diese versuchen zu verstehen.
 
 Der Begriff "Domain Driven Design" welcher vom gleichnamigen Buch von Eric Evans stammt impliziert genau dies. Nicht per Zufall wird bereits im Vorwort das agile Entwicklungsvorgehen betont und der Zusammenhang zwischen Domänengetriebenem Softwaredesign und Agiler Vorgehensweise erläutert.
 
 ## Empirisches Mindset
+
 Ein agiler Softwareentwickler entwickelt nicht nur die Software im Sinne eines empirischen Ansatzes sondern sollte auch einen solchen Mindset haben. Er will das Produkt stets verbessern, dies macht er in kleinen Schritten und reflektiert diese zwischendurch. Genau diese Einstellung sollte er auch zu seinem Handwerk haben. Er will sich stets verbessern, stets neue Sachen und Herangehensweisen lernen. Er kann sein erlerntes Wissen weitergeben aber auch neue Sachen von anderen annehmen. 
 
 ### Entwicklermentalitäten
+
 Erfahrene Entwickler äussern ihre Erfahrung auf verschiedene Arten. Das eine extrem ist, die "sich tendenziell überschätzende" Art und Weise. Für diese Entwickler ist alles relativ einfach umzusetzen. Probleme gibt es nicht nur Lösungen und kaum ist ein Problem andiskutiert wissen diese Entwickler bereits wie man sie am besten angehen und Lösen sollte. Die andere Art und Weise ist die "sich tendentiell unterschätzende". Diese Programmieren sehen überall Herausforderungen. Werden Probleme andiskutiert, so sind für diese Entwickler erstmal nur eine Menge an Problemen zu sehen. Generell denke ich, dass die zweite Art eher für ein agiles Entwicklungsteam geeognet ist. Sie nehmen Probleme ernst, was dazu führt dass sie sich damit auseinandersetzen. Sie hinterfragen die Dinge eher als die Entwickler welche schon die vermeindliche Lösung im Kopf haben. Entwickler die sich in solchen Situationen tendenziell überschätzen neigen dazu, Aufwandschätzungen etc. zu beinflussen. Diskussionen mit Product Owner oder Stakeholder sind zudem nicht so konstruktiv, da viele Lücken in den Anforderungen erst durch nachfragen der Entwickler auftauchen. Das Nachfragen und hinterfragen macht man jedoch nur, wenn man ein Problem sieht, nicht wenn man schon die geeignete Lösung dafür im Kopf hat.
 
 ## Schlussfolgerung
+
 Ein Agile Entwickler denkt nicht in Projekten oder Meilensteinen. Ein Agiler Entwickler hat stets das Produkt im Fokus und will gute Lösungen für den Anwender entwickeln. Er ist Teamfähig, kann mit verschiedensten Rollen kommunizieren, ist technisch sehr versiert und arbeitet sich in den Fachbereich der Software hinein. All dies macht den Agilen Softwareentwickler zu einem der wertvollsten Personen in einem Unternehmen. Für Unternehmen stellt sich die Frage, wie kommt man an solche Agile Softwareentwickler. Volker Birk erläutert dies in seinem Talk ganz gut "Du musst sie ausbilden, ab und zu bekommst du einen geschenkt"[^4]. 
 
 <div class="divider"></div>
 
 ## Referenzen
+
 [^1]: Agiles Manifest, <a href="https://agilemanifesto.org/iso/de/manifesto.html" target="_blank">agilemanifesto.org</a>
 [^2]: Domain Driven Design, Eric Evans
 [^3]: Der leidenschaftliche Programmierer, Chad Fowler
