@@ -1,21 +1,22 @@
 ---
 title: Der Agile Softwareentwickler
 updated: 2019-07-25 23:37
+teaser: Software entwickelt man heute agil. Agil ist in, agil hat sich bewährt. Alles dreht sich um agile Softwareentwicklung. Unternehmen krempeln ihre Softwareentwicklungs Abteilungen um und Informatikstudenten erlernen die inkrementelle, iterative und empirische herangehensweise bereits im Studium. In Schulungen und Kursen werden vermeindlich neue Begriffe wie Product Owner, Scrum Master, Sprint oder Daily vermittelt und erläutert. Was dabei leider sehr oft nicht berücksichtigt wird ist, dass sich die Rolle der Entwickler ebenfalls wesentlich ändert.
 ---
 Will man von einem traditionellen (wohl Wasserfall orientierten-) Ansatz auf einen Agilen Softwareentwicklungs-Ansatz umstellen, so kommt man nicht um prominente Vertreter wie Scrum oder Kanban herum. Ehe man sich versieht, setzt man sich mit Rollenbeschreibungen wie dem Product Owner oder Scrum Master auseinandersetzen. Die Unmengen an Büchern, Kurse und natürlich Blog Posts helfen einem dabei. Was bei einer solchen "Agilen Transformation" meist ausser Acht gelassen wird ist, dass sich die Rolle des Entwicklers sehr stark ändert. Erkennt man dies nicht, droht die Transformation zu scheitern.
 
-> *[..]* But theory rarely works in practice, and predictability has a devious sister named complexity -- *Jurgen Apelo [^8]*
+In diesem Artikel möchte im meine Gedanken zur Rolle eines agilen Softwareentwicklers teilen.
 
 ## Wasserfall vs. Agil
 
-In einem typisch Wasserfall orientiertem Vorgehen ist der Softwareentwickler mehrheitlich in der Entwicklungs-Phase involviert. Im Gegensatz dazu wird er bei einem Agilen Vorgehen in allen Projektphasen vertreten sein. Natürlich bedeutet dies nicht, dass er auf einmal die Anforderungen für das Produkt selbst erhebt und damit die "Requirement Engineers" Arbeitslos macht. Es geht dabei vielmehr darum, dass bei einem Agilen Vorgehen die verschiedenen Diszplinen sehr eng miteinander zusammenarbeiten und dadurch alle daran beteiligten Personen ihr Spektrum erweitern müssen.
+In einem typisch Wasserfall orientiertem Vorgehen ist der Softwareentwickler primär in der Entwicklungs-Phase involviert. Im Gegensatz dazu ist er bei einem Agilen Vorgehen in allen Projektphasen vertreten. Natürlich bedeutet dies nicht, dass er auf einmal die Anforderungen für das Produkt selbst erhebt und damit die "Requirement Engineers" Arbeitslos macht. Es geht dabei vielmehr darum, dass bei einem Agilen Vorgehen die verschiedenen Diszplinen sehr eng miteinander zusammenarbeiten und dadurch alle daran beteiligten Personen ihr Spektrum erweitern müssen.
 
 ![Minion](/assets/images/waterfall-vs-agile.png)
 
-So ist die Rolle des Entwickler-Teams z.B. bereits bei der Anforderungerhebung sehr entscheidend, da nur sie das Know-How über die Software haben. Sie sind die einzigen, welche beurteilen können wie eine neue Anforderung implementiert werden soll, ob es eine einfachere und güstigere Alternative für das Problem des Anwenders gibt, oder ob die Architektur für kommende Anforderungen bereits gewappnet ist. 
+Das Entwickler-Team wird also bereits bei der Anforderungserhebung miteinbezogen. Dies is sehr entscheidend, da nur sie das Know-How über die Implementierung der Software haben. Sie sind die einzigen, welche beurteilen können wie eine neue Anforderung implementiert werden soll, ob es eine einfachere und güstigere Alternative für das Problem gibt, oder ob die Architektur für kommende Anforderungen bereits gewappnet ist oder nicht.
 
 Die Agile Vorgehensweise sagt meiner Meinung nämlich vorallem eines aus:
-**Diejenigen, die die Arbeit machen, entscheiden auch wie sie sie machen. Dies betrifft sowohl die technische Umsetzung, wie auch die Vorgehensweise wie die Software entwickelt wird.**
+**Diejenigen, die die Arbeit machen, entscheiden auch wie sie sie machen. Dies betrifft sowohl die technische Umsetzung, wie auch die Vorgehensweise, mit welcher die Software entwickelt wird.**
 
 Im folgenden will ich genauer auf die (meiner Meinung nach) relevantesten Eigenschaften und Fähigkeiten eines Entwicklers im Agilen Umfeld eingehen.
 
@@ -123,4 +124,4 @@ Ein Agile Entwickler denkt nicht in Projekten oder Meilensteinen. Ein Agiler Ent
 [^5]: Clean Coder, Robert C. Martin
 [^6]: Extreme Programming Explained, Kent Beck
 [^7]: Extreme Programming - Eine Übersicht, Rolf Dornberger & Thomas Habegge, Fachhochschule Solothurn Nordwestschweit, Reihe A: Paper 2005-05
-[^8] Management 3.0, Jurgen Appelo
+[^8]: Management 3.0, Jurgen Appelo
