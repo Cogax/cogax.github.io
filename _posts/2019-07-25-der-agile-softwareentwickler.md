@@ -1,5 +1,7 @@
 ---
 title: Der Agile Softwareentwickler
+toc: true
+note: true
 updated: 2019-07-25 23:37
 teaser: Software entwickelt man heute agil. Agil ist in, agil hat sich bewährt. Unternehmen krempeln ihre Softwareentwicklungs-Abteilungen um, und Informatikstudenten erlernen die inkrementelle, iterative und empirische herangehensweise bereits im Studium. In Schulungen und Kursen werden vermeindlich neue Begriffe wie Product Owner, Scrum Master, Sprint oder Daily vermittelt und erläutert. Was dabei leider sehr oft nicht berücksichtigt wird ist, dass sich die Rolle der Entwickler ebenfalls wesentlich ändert.
 ---
@@ -67,6 +69,15 @@ Die Zeiten, als ein einzelner Programmierer das Know-How über die gesammte Soft
 
 Im Paper über Extreme Programming (XP) [^7] wurde dies ziemlich gut zusammengefasst:
 > Die Entwickler und Entwicklerinnen müssen in einem hohen Mass teamfähig sein, da gerade das Entwickeln in Paaren eine hohe Sozialkompetenz voraussetzt. Dies ist insbesondere wichtig, da in XP der Programmierer neben der eigentlichen Programmierung auch für die Aufwandschätzung und für das Erstellen der Tests verantwortlich ist, also Aktivitäten, die immer auch mit den anderen Personen koordiniert werden müssen. Einzelgänger, die nicht über ihre Arbeit diskutieren können oder nicht kritikfähig sind, eignen sich nicht für ein XP-Team. Der Teamerfolg muss in jedem Moment über dem eigenen Erfolg stehen. Ängste sich zu blamieren, veraltete Ansichten zu vertreteten, nutzlos zu werden oder den hohen Anforderungen nicht zu genügen, müssen überwunden werden, um erfolgreich in einem XP-Team mitarbeiten zu können. Dies ist gerade für die Programmierer, die in der Regel nicht besonders kommunikativ sind, eine besondere Herausforderung (vgl. Beck 2003: 141).
+
+## Eigenverantwortung
+Durch die Zusammenarbeit mit verschiedenen Rollen und Disziplinen, steigert sich auch die Verantwortung eines Entwicklers. Wo bei einem klassischen Vorgehen die Verantwortung strikt an die vorgehende Phase abgegeben werden kann, ist dies im agilen Umfeld nicht möglich. Entwickler müssen die Verantwortung bewusst übernehmen.
+
+* In Planungsmeetings (Bspw. "Refinement" im Scrum) sind Entwickler verpflichtet, die Anforderungen auf Sinn und Unsinn zu hinterfragen. Sie verpflichten sich beispielsweise, den Umfang einer User-Story abschätzen zu können, bevor diese in den Sprint eingeplant wird.
+* In der Entwicklungsphase verpflichten sich die Entwickler, die Arbeit in guter Qualität auszuführen, da sie sich für das Produkt verantworlich fühlen. *Kein Entwickler hinterlässt gerne eine Baustelle wenn er sich wirklich für ein Produkt einsetzt und verantwortlich fühlt.*
+  * Oft ist die Meinung der Entwickler, dass der Zeitdruck zu hoch sei um eine Anforderung in wirklich guter Qualität und ausreichend getestet abzuschliessen. In einem wirklich agilen Umfeld ist dies meiner Meinung nach nur eine Ausrede. Da die Entwickler bereits bei der Anforderungserhebung sowie Schätzung miteinbezogen werden, liegt die ganze Verantwortung bei ihnen. **Es wird selten ein Produktverantwortlicher ("Product Owner" im Scrum) bei User-Stories konkret gute Qualität, schöne Architekturen, Clean Code oder eine hohe Unit- Testabdeckung fordern. Dies ist auch nicht das Ziel, da diese Verantwortung die Entwickler zu tragen haben. Jedoch haben die Entwickler bei einem Agilen Ansatz auch alle Mittel zur Verfügung um diese Verantwortung wahrzunehmen. Beispielsweise können sie bei der Aufwandschätzung und Arbeitsplanung aktiv mitwirken.**
+* Beim testen und der Auslieferung sind die Entwickler ebenfalls involviert. Bei einem klassischen Ansatz kommt oft das Gefühl hoch, dass nach der Entwicklung, das zu testende Artefakt einfach "über den Zaun" zur nächsten Stufe, dem Testing, gereicht wird. Dies sollte so nicht sein. Ziel ist auch hier, dass man Hand in Hand zusammenarbeitet und eine Arbeit erst als erledigt betrachtet, wenn auch der Test erfolgreich abgeschlossen wurde ("Defition of Done" im Scrum).
+* Bei DevOps-Teams, welche eine Software ebenfalls betreiben, reicht die Verantwortung gar noch weiter. Sie sind für den Betrieb zuständig udn verantwortlich. Sie übernehmen diese Verantwortung am besten indem sie die Software so bauen, dass sie einfach von ihnen selbst überwacht werden kann (Monitoring). Ist dies nicht der Fall, kann es vorkommen, dass entweder die Entwickler, oder die Supportabteilung mit Arbeit überschwemmt wird. 
 
 ## Kommunikation
 
