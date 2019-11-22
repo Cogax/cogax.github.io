@@ -12,8 +12,13 @@
         box-sizing: border-box;
      }
 
-     div.toc { width: 30%; }
-     .teaser { width: 70%; padding-left: 30px; }
+     div.toc { width: 44%; }
+     .teaser { width: 56%; padding-left: 30px; }
+
+     @media screen and (max-width: 992px) {
+        div.toc { width: 100%; }
+        .teaser { width: 100%; padding-left: 0; margin-top: 30px; }
+      }
  }
 
 ul.toc {
