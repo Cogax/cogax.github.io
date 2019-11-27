@@ -63,7 +63,7 @@ Teamfähigkeit bzw. Teamwork wird leider sehr oft missverstanden. Vielleicht erk
 
 ### Untypische Eigenschaft für Programmierer
 
-Die Zeiten, als ein einzelner Programmierer das Know-How über die gesammte Software hat und diese alleine nach seinen Vorstellungen von Architektur und Design entwickelt ist vorbei. Dies ist nicht nur nicht Businessorientiert, es skaliert auch nicht und ist kein langfristiger Ansatz. Solche Software wird früher oder später neu geschrieben werden müssen, egal wie exzellent und sauber sie aufgebaut ist.
+Die Zeiten, als ein einzelner Programmierer das Know-How über die gesammte Software hatte und diese alleine nach seinen Vorstellungen von Architektur und Design entwickelt ist vorbei. Dies ist nicht nur nicht Businessorientiert, es skaliert auch nicht und ist kein langfristiger Ansatz. Solche Software wird früher oder später neu geschrieben werden müssen, egal wie exzellent und sauber sie aufgebaut ist.
 
 >Vielleicht sind wir nicht deswegen in das Metier der Programmierer gelangt, um mit anderen zu kollaborieren. Tja, Überraschung! Beim Programmieren geht es vor allem um die Zusammenarbeit mit anderen. Wir müssen mit unserem Business zusammenarbeiten - genauso wie auch mit unseren Programmierkollegen. [^5]
 
