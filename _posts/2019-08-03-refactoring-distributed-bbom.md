@@ -3,7 +3,7 @@ title: Refactoring Distributed Big Balls of Mud
 toc: true
 note: true
 updated: 2019-07-25 23:37
-teaser: Der Microservice-Hype hat viele Softwareentwickler dazu verleitet schlechte Softwarearchitekturen über das Netzwerk zu verteilen. Was daraus resultiert ist oft schlimmer als nur ein schlechter Monolith. Und trotzdem haben es auch solche Systeme verdient modernisiert, gewartet und erweitert zu werden.
+teaser: Der Microservice-Hype hat viele Softwareentwickler dazu verleitet, schlechte Softwarearchitekturen über das Netzwerk zu verteilen. Was daraus resultiert ist oft schlimmer als nur ein schlechter Monolith. Und trotzdem haben es auch solche Systeme verdient modernisiert, gewartet und erweitert zu werden.
 ---
 Der Begriff *Big Ball of Mud* [^ddd] bezeichnet die Struktur einer Software, welche keine erkennbare Architektur besitzt. Es gilt als schlimmes, aber trotzdem häufig auftretendes Anti-Pattern. Schlimmer geht nicht.. oder doch? *Distributed Big Balls of Muds* [^distributed-bbom] bezeichnet dasselbe Phänomen, bei welchem die Architektur jedoch verteilte Systeme beinhaltet. Solche Software ist schlecht wartbar und wird oft als legacy bezeichnet. Doch wie geht es damit weiter? Kürzlich hatte ich mit genau solcher legacy Software zu tun. Dieser Artikel beschreibt ein rein hypothetisches Vorgehen, wie man aus dem (wortwörtlichen) Schlamassel rauskommen könnte.
 
@@ -16,25 +16,27 @@ Die Definition von Legacy Software ist wohl für jeden eine andere. In diesem ko
 Das System war schwer verständlich. Fachliche Logik war durch die schnelle Entwicklungsphase über das ganze System verstreut. Zudem kamen diverse Workarounds- und Fehler hinzu. Fachliche Logik wurde mehrfach, aber trotzdem unterschiedlich und nicht zentral implementiert.
 
 **Hoher Operations-Aufwand:**
-Das System wurde wie eine mechanische Maschine betrieben. Mal hat ein Entwickler da etwas manuell in der produktiven Datenbank korrigiert, mal mussten man dort fehlerhafte Import-Daten manuell bereinigen. Produktivstellungen (Deployments) waren sehr heikel und mühsam und demnach nicht automatisiert. Die Datenbanken (und damit auch Teile im Code) waren im "extend only" Mode, weil man Angst hatte etwas kaputt zu machen.
+Das System wurde wie eine mechanische Maschine betrieben. Mal hat ein Entwickler da etwas manuell in der produktiven Datenbank korrigiert, mal mussten dort fehlerhafte Import-Daten manuell bereinigt werden. Produktivstellungen (Deployments) waren sehr heikel und mühsam, und somit auch nicht automatisiert. Die Datenbanken (und damit auch Teile im Code) waren im "extend only Mode", weil man Angst hatte etwas kaputt zu machen.
 
 **Viele Defects / Bugs:**
-Neue Anforderungen führten zu komischen Verhalten in anderen Teilen der Software. Oder, wenn man einen Defect fixte, entstanden drei andere. All dies sind Indizien für legacy Software.
+Neue Anforderungen führten zu komischen Verhalten in anderen Teilen der Software. Wenn man einen Defect fixte, entstanden drei andere. All dies sind Indizien für legacy Software.
 
 **Wartbarkeit:** [^wartbarkeit]
-Die Wartbarkeit war nicht gegeben. Ich persönlich finde eine gute Messgrösse der Software-Wartbarkeit ist, zu schauen wie lange es dauert, bis neue Entwickler ein System erweitern, und im Fall von DevOps auch selbständig betreiben können. Oft wird dieses Problem zwar erkannt, die Reaktion schlägt sich dann aber in einer ebenfalls nicht gewarteten Dokumentation nieder. Somit hat man noch mehr unwartbare Artefakte, welche neue Entwickler mehr verwirren als helfen.
+Die Wartbarkeit war nicht gegeben. Ich persönlich finde eine gute Messgrösse der Software-Wartbarkeit ist, zu schauen wie lange es dauert, bis neue Entwickler ein System erweitern, und im Fall von DevOps, auch selbständig betreiben können. Oft wird dieses Problem zwar erkannt, die Reaktion schlägt sich dann aber in einer ebenfalls nicht gewarteten Dokumentation nieder. Somit hat man noch mehr unwartbare Artefakte, welche neue Entwickler mehr verwirren als helfen.
 
 **Skalierbarkeit:**
-In gewissen Teilen der Software wurde die nicht vorhandene Skalierbarkeit wohl erkannt. Statt diese Thematik jedoch aufzugreifen und zu diesem Zeitpunkt ein Refactoring anzustossen, wurde bewusst die Skalierbarkeit bewusst limitiert.
+In gewissen Teilen der Software wurde die nicht vorhandene Skalierbarkeit wohl erkannt. Statt diese Thematik jedoch aufzugreifen und zu diesem Zeitpunkt ein Refactoring anzustossen, wurde bewusst die Skalierbarkeit limitiert und eine technische Schuld aufgebaut.
 
 **Keine Tests:**
-Leider waren überhaupt keine Tests implementiert. Automatisierte Tests waren von Beginn an kein Bestand der Lösung - dementsprechend niedrig war auch die Code-Qualität (Stichwort Kopplung etc.). Das wirklich erschreckende war jedoch, dass überhaupt kein Testing-Prozess vorhanden war. Bei Neuentwicklungen wurde meist nur der Nice-Case durchgespielt. Es gab keine Person neben den Entwicklern, welche das Ganze System kannte und hätte testen können.
+Leider waren überhaupt keine Tests implementiert. Automatisierte Tests waren von Beginn an kein Bestand der Lösung - dementsprechend niedrig war auch die Code-Qualität (Stichwort Kopplung etc.). Das wirklich erschreckende war jedoch, dass überhaupt kein Testing-Prozess vorhanden war. Bei Neuentwicklungen wurde meist nur der Nice-Case durchgespielt. Es gab keine Person (nebst den Entwicklern), welche das ganze System kannte und hätte testen können.
+
+> Code ohne Tests ist nicht sauber. Egal wie elegant er ist, egal wie lesbar und änderungsfreundlich er ist, ohne Tests ist er unsauber. (Robert C. Martin) [^cleancode]
 
 **Fehlendes Entwickler Know-How:**
 Dieser Punkt geht nicht zwingend unter legacy Software, dennoch beschleunigt er dessen Prozess. In diesem konkreten Fall wies sich dies in diversen Gebieten aus. Es gab zum Beispiel keine Entwicklungsumgebung. Ein lokal ausgeführter Service war immer mit der Datenbank sowie anderen Services aus dem Testsystem verknüpft. Dies machte nicht nur ein lokales entwickeln unmöglich, sondern sorgte auch dazu, dass die Testumgebung nicht isoliert war. Noch schlimmer war, dass die Services auf Datenbankebene miteinander integrierten.
 
 ## Refactoring: Grobes Vorgehen
-Als allererstes muss natürlich erkannt werden, dass das System legacy ist. Dies ist für Aussenstehende sicherlich einfacher als für Personen, welche von Beginn an dabei waren. Vielleicht wird erst versucht, bei den oben genannten Punkten nicht die Ursache sondern die Symptome zu bekämpfen. Man regelt und verstärkt bspw. den internen Support oder man trennt Entwicklung und Operations auf (Dev vs. Ops statt DevOps). Alles aus meiner Sicht keine langfristigen Lösungen.
+Als allererstes muss natürlich erkannt werden, dass das System legacy ist. Dies ist für Aussenstehende sicherlich einfacher als für Personen, welche von Beginn an dabei waren. Vielleicht wird erst versucht, bei den oben genannten Punkten nicht die Ursache sondern die Symptome zu bekämpfen. Man regelt und verstärkt bspw. den internen Support, oder man trennt Entwicklung und Operations auf (Dev vs. Ops statt DevOps). Alles aus meiner Sicht keine langfristigen Lösungen.
 
 Als Entwickler muss man regelrecht dafür kämpfen, dass die subjektive Ansicht auf das bestehende System abgelegt wird und all die Probleme rein objektiv betrachtet werden. Man braucht viel Geduld und muss Lobbyarbeit für einen Umbau betreiben. Dabei ist ein gewisses Mass an Geduld, Kommunikationsfähigkeit und leider oft auch Politikwissenschaften hilfreich.
 
@@ -108,3 +110,4 @@ Aus den gemachten Fehlern muss natürlich gelernt werden. Datenhoheiten müssen 
 [^wartbarkeit]: <a href="https://de.wikipedia.org/wiki/Wartbarkeit" target="_blank">Wikipedia: Wartbarkeit</a>
 [^ddd]: Domain-Driven Design, Eric Evans, <em><a href="https://amzn.to/3143VjB" target="_blank">Amazon</a></em>
 [^distributed-bbom]: <a href="http://www.codingthearchitecture.com/2014/07/06/distributed_big_balls_of_mud.html" target="_blank">Distributed Big Balls of Mud</a>
+[^cleancode]: Clean Code, Robert C. Martin, <em><a href="https://amzn.to/2tp4AAm" target="_blank">Amazon</a></em>
