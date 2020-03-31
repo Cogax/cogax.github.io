@@ -10,11 +10,11 @@ Will man ein Klassifikationsproblem mit Tensorflow und Keras lösen, bei welchem
 
 > Imbalanced data classification is an inherantly difficult task since there are so few samples to learn from. You should always start with the data first and do your best to collect as many samples as possible and give substantial thought to what features may be relevant so the model can get the most out of your minority class. At some point your model may struggle to improve and yield the results you want, so it is important to keep in mind the context of your problem and the trade offs between different types of errors.
 
-<a href="https://www.youtube.com/watch?v=HBi-P5j0Kec" target="_blank">Dieses Video</a> erklärt die sehr gut.
+<a href="https://www.youtube.com/watch?v=HBi-P5j0Kec" target="_blank">Dieses Video</a> erklärt dies sehr gut.
 
 ## Metriken während dem Training: Callbacks
 
-Mir haben folgende *Keras Callbacks* sehr geholfen um während dem Training eines Modelles nicht allein die *Accuracy* im Auge zu behalten sondern die "wirkliche performance". Dabei werden die wichtigsten Werte viduell dargestellt und geplottet (ohne Verwendung von TensorBoard).
+Mir haben folgende *Keras Callbacks* sehr geholfen um während dem Training eines Modelles nicht allein die *Accuracy* im Auge zu behalten, sondern die "wirkliche performance" (z.B. F1-Score). Dabei werden die wichtigsten Werte visuell dargestellt und geplottet (noch ohne Verwendung von TensorBoard).
 
 ```python
 import matplotlib.pyplot as plt    
