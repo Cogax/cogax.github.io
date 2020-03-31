@@ -217,3 +217,4 @@ Im folgenden Bild ist ein Ausschnit der Trainingsphase mit Google Colab ersichtl
 * <a href="https://www.youtube.com/watch?v=HBi-P5j0Kec" target="_blank">Video: Performance measure on multiclass classification [accuracy, f1 score, precision, recall]</a>
 * <a href="https://www.tensorflow.org/tutorials/structured_data/imbalanced_data#applying_this_tutorial_to_your_problem" target="_blank">Tensorflow: Classification on imbalanced data</a>
 * <a href="https://www.curiousily.com/posts/practical-guide-to-handling-imbalanced-datasets/" target="_blank">Practical Guide to Handling Imbalanced Datasets</a>
+* <a href="https://github.com/chasingbob/keras-visuals" target="_blank">GitHub: keras-visuals</a>
