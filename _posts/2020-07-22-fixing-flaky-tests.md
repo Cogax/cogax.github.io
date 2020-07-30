@@ -26,7 +26,7 @@ You can't fix a green test. If a test fails very rarely make it fail all over ag
 
 #### Repeat flaky tests
 Repeat your test for 10 / 100 / 1000 times to make them fail constantly.
-NUnit has its own <a href="https://docs.nunit.org/articles/nunit/writing-tests/attributes/repeat.html" targer="blank">Repeat Attribute</a> MSTest doesn't. But you can implement something like this which acts the same way:
+NUnit has its own <a href="https://docs.nunit.org/articles/nunit/writing-tests/attributes/repeat.html" targer="blank">Repeat Attribute</a> MSTest doesn't. But you can implement something like this in **MSTEST** which acts the same way:
 ```csharp
 // RepeatedTestMethodAttribute.cs
 [AttributeUsage(AttributeTargets.Method, AllowMultiple = false)]
@@ -52,6 +52,38 @@ public async Task MyFlakyTest()
 {
     // ..
 }
+```
+For **xUnit**:
+```csharp
+// RepeatAttribute.cs
+public class RepeatAttribute : DataAttribute
+{
+    private readonly int _count;
+
+    public RepeatAttribute(int count)
+    {
+        if (count < 1)
+        {
+            throw new ArgumentOutOfRangeException(nameof(count), 
+                  "Repeat count must be greater than 0.");
+        }
+        _count = count;
+    }
+
+    public override IEnumerable<object[]> GetData(MethodInfo testMethod)
+    {
+        return Enumerable.Repeat(new object[0], _count);
+    }
+}
+
+// MyTest.cs
+[Theory]
+[Repeat(10)]
+public void MyTest()
+{
+    // ..
+}
+// source: https://stackoverflow.com/a/31878640/3523716
 ```
 
 #### Reduce overall test scope
