@@ -110,9 +110,13 @@ $ dotnet test --filter Priority=2
 
 It's important to run those tests the same way as they are executed in your CI pipeline. Mostly this will be inside a Docker container, so it makes sense to run them the same way on your local machine. **Don't run them in Visual Studio**.
 
-### #3: Adjust time behaviors
+### #3: Change runtime behavior
 
+#### Change timing behavior
 Most of the flaky test I experienced were caused by unexpected timing behaviors. This means that some parts of your code took more time than other parts which leads to side effects you've never thought of. Insert 'Task.Delay(..)' or 'Thread.Sleep(..)' here and there, but specially in code who is handling events. Also change timing behavior of your system dependencies (Mocks, Clients, etc.).
+
+#### Debug with conditional breakpoints
+Most modern IDE's offer ways to set conditional breakpoints. While it's not useful to debug a repeated test scenario, a conditional breakpoint can bring you right to the critical setup. A conditional breakpoint will insert a breakpoint at a specific place in your code, when a given condition is given. With that, you can for example set a breakpoint when a list has no items.
 
 ### #4 Fix flaky test
 
