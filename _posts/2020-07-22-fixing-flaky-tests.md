@@ -18,11 +18,11 @@ Personally I don't like to make assumptions on how something "was maybe going". 
 
 ### #1 Ignore test in CI pipeline
 
-Make a pleasure for your teammates and ignore those tests, so they aren't interrupted anymore. But don't just ignore them, **only ignore tests you are investigating**. You need to make it clear to the team that you are trying to fix that test so that nobody else is investigating in the same failure. In <a href="https://www.jetbrains.com/de-de/teamcity/" target="blank">TeamCity</a> you can mark such a test with "investigating" which is really nice.
+Make a pleasure for your teammates and ignore those tests, so they don't interrupt anyone anymore. But don't just ignore them, **only ignore tests you are investigating**. You need to make it clear to the team that you are trying to fix that test so that nobody else is investigating in the same failure. In <a href="https://www.jetbrains.com/de-de/teamcity/" target="blank">TeamCity</a> you can mark such a testa with an "investigatiion" flag, which is really nice.
 
 ### #2: Make test fail always on your local machine
 
-You can't fix a green test. If a test fails very rarely make it fail all over again. This is crucial because if that's not the case, how can you say you fixed the test when it was never failing on your local machine?
+You can't fix a green test. If a test fails very rarely, make it fail all over again. This is crucial because if that's not the case, how can you say you fixed the test when it was never failing on your local machine?
 
 #### Repeat flaky tests
 Repeat your test for 10 / 100 / 1000 times to make them fail constantly.
