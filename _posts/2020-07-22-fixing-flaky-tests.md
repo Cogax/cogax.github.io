@@ -10,7 +10,7 @@ Flaky tests are really disgusting. When a test fails randomly, but passes when y
 
 The higher a test resides in the test pyramid [^1], the flakyier it becomes. This is caused by the wide range of which an integration- or even end-to-end- test covers. They also need way more testing infrastructure to be set up the right way beforehand in order to execute. Challenging is also, that those tests have to be totally isolated from each other, even they need shared infrastructural resources. Correct setups and tear downs of those tests is a key factor. On the other hand always setting up so much is time intensive. And time can be crucial when it comes to DevOps and fast time-to market.
 
-I've experienced different kinds of flaky tests and have seen different strategies to handle them. While "fix them later" is the most seen methodology - When they find the way into your backlog, most of us developers analyze them by simple guessing what was the root cause might could be. You can't debug them with exactly the same behavior of the failure, and therefore you can't analyze them. Just look at the code and guess what the problem could be.
+I've experienced different kinds of flaky tests and have seen different strategies to handle them. While "fix them later" is the most seen methodology - when they find the way into your backlog, most of us developers analyze them by simple guessing what the root cause might would be. You can't debug them with exactly the same behavior of the failure run, and therefore, you can't analyze them. Just look at the code and guess what the problem would be.
 
 ## Recipe for flaky tests
 
