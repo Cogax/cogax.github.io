@@ -3,14 +3,14 @@ title: Messaging Basics with the Outbox Pattern
 toc: false
 note: false
 updated: 2021-04-22 17:11
-teaser: When you receive a new requirement that should be implemented as a reaction to something, you have two options. The quick and dirty option is just to put more code on the lines right after the triggering code. A cleaner solution is to publish an event, especially if that “something” has some business relevance. While events are really simple to understand it’s implementation can be very hard.
+teaser: When you receive a requirement to implement a functionality as a reaction of something happened in your system, you have two options. A quick and dirty solution is to put more code on the lines right after the triggering code. A cleaner solution is to publish an event, especially if that “something” has some business relevance. While events are really simple to understand it’s implementation can be very hard.
 ---
 
 If you want to develop a modularized system, which is distributed (or you want to be prepared for that), that “just publish an event” opens the door to some of the most complex problems in software engineering. This post will demonstrate that and will show you how those problems can be solved. It’s done by pseudo C# code using MediatR.
 
 ## A practical, basic Todo example
 
-Let’s imagine we need to react when a user completes a todo. We decided to implement it with an event — and even we can have a single deployment unit at the moment — we want to be prepared for high scalability. Therefore in the future, we may split deployment units and integrate them via Message Bus.
+Let’s imagine we need to react when a user completes a todo. We decided to implement it with an event — and even we currently have only a single deployment unit, we want to be prepared for high scalability. In the future, we may split deployment units and integrate them via Message Bus.
 
 ![Example Overview](/assets/images/outbox1.png)
 
