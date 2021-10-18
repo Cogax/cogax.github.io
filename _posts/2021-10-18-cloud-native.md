@@ -8,7 +8,7 @@ teaser: Der Begriff "Cloud Native" gewinnt immer mehr an Popularität. Was steck
 
 Cloud Native ist ein Ansatz, welcher versucht, Applikationen, die in der Cloud betrieben werden, unabhängig vom Cloud Provider zu definieren. Durch die Cloud wurden sehr viele "Managed Services" (sogenannte Plattformservices) von verschiedensten Cloud-Providern angeboten. Jeder Service löst dabei meist ein spezifisches Problem sehr gut, büsst dafür jedoch meist bei den Punkten Konfigurationsmöglichkeiten, Portabilität, Interoperabilität und Wartung ein. Durch Plattformservices bindet man sich nicht nur an den Vendor ("Vendor Lock-In"), sondern auch an dessen Release Zyklus. Vermutlich muss man seine Applikation stets up-to Date halten - was bei grösseren Enterprise Applikationen oft schlichtweg nicht möglich ist.
 
-Hat man eine Applikation in der Cloud Betrieben, so hat man aufgrund der spezifischen Plattform Services sehr oft eine Microservice-Architektur angewandt. Nur so konnte man die Stärken der einzelnen Services optimal ausnutzen und kombinieren. Microservice Architekturen bringen jedoch auf der Infrastruktur und Betrieb Seite viele Herausforderungen mit sich. So sind beispielsweise die Integrationspunkte zwischen den Services ein zentraler Punkt, welche oft zu Problemen führt. Diese Probleme führen oft dazu, dass man vermeintliche Infrastruktur Themen in der Applikation selbst und somit in jeden einzelnen Service implementiert, nur um die Kommunikationsschwierigkeiten der Services zu korrigieren. Retry Logiken sind nur ein Beispiel davon.
+Hat man eine Applikation in der Cloud Betrieben, so hat man aufgrund der spezifischen Plattform Services sehr oft eine Microservice-Architektur angewandt. Nur so konnte man die Stärken der einzelnen Services optimal ausnutzen und kombinieren. Microservice Architekturen bringen jedoch auf der Infrastruktur und Betrieb Seite viele Herausforderungen mit sich. So sind beispielsweise die Integrationspunkte zwischen den Services ein zentraler Punkt, welcher oft zu Problemen führt. Meist löst man diese, indem man vermeintliche Infrastruktur Themen in der Applikation selbst, und somit in jeden einzelnen Service implementiert, nur um die Kommunikationsschwierigkeiten der Services zu korrigieren. Retry Logiken von Http Aufrufen sind nur ein Beispiel davon.
 
 Der Cloud Native Ansatz versucht sich beim Cloud-Computing aufs Wesentliche zu konzentrieren. Als Basis wird quasi nur die Infrastruktur genommen, welche jeder Cloud Provider mit Leichtigkeit bieten kann. Darauf baut ein ganzes Ökosystem auf, welches mit Kubernetes als Flaggschiff versucht, einen generischen Ansatz in das Cloud-Computing zu bringen.
 
@@ -18,7 +18,7 @@ Abstraktion ist beim Design und dem Architekturentwurf einer Applikation ein zen
 
 ### Abstraktion durch Container
 
-Um eine Software ohne Wissen der Laufzeitumgebung bereitzustellen, sollte man Container verwenden. Nur so kann man sich sinnvoll vom Implementierungsdetail der Laufzeitumgebung abstrahieren. Ein Container beinhaltet jeweils die Runtime der Software, egal ob die Software in Java, Python oder C# .NET geschrieben ist, schlussendlich wird ein lauffähiger Container geliefert. Der Container kann nur auf alles Plattformen betrieben werden. Es ist nicht nötig, dass eine bestimmte JRE oder .NET Version installiert ist. Durch diese Abstraktion bekommt man viele Vorteile:
+Um eine Software ohne Wissen der Laufzeitumgebung bereitzustellen, sollte man Container verwenden. Nur so kann man sich sinnvoll vom Implementierungsdetail der Laufzeitumgebung abstrahieren. Ein Container beinhaltet jeweils die Runtime der Software, egal ob die Software in Java, Python oder C# .NET geschrieben ist, schlussendlich wird ein lauffähiger Container geliefert. Der Container kann auf allen Plattformen betrieben werden. Es ist nicht nötig, dass eine bestimmte JRE oder .NET Version installiert ist. Durch diese Abstraktion bekommt man viele Vorteile:
 
 **Einheitlicher, generischer DevOps Prozess**
 
@@ -42,11 +42,11 @@ Durch den Einsatz von Container wir der Betrieb generisch. Statt spezifische App
 
 **Abstraktion der Infrastruktur**
 
-Sehr oft ist im Infrastrukturlayer der Applikation sehr viel Code implementiert, der in die Infrastruktur ausgelagert werden sollte. Ein Beispiel sind Retries und das Circuit-Breaker Pattern bei synchronen Integrationen via Http Aufrufe. Sehr oft werden in jeder Applikation Policies definiert, welche regeln, welcher Endpunkt welche Charakteristiken hat. Dies sollte in die Infrastruktur ausgelagert werden und in einem Service Mesh systemweit definiert sein. Mit Proxy-Containern kann die Kommunikation ausserhalb der Applikation geregelt werden. Somit können Applikationsentwickler einfacher arbeiten ohne Implementierungsdetails der Infrastruktur.
+Sehr oft ist im Infrastrukturlayer der Applikation sehr viel Code implementiert, der in die Infrastruktur ausgelagert werden sollte. Ein Beispiel sind Retries und das Circuit-Breaker Pattern bei synchronen Integrationen via Http Calls. Diese werden dann in jeder Applikation als Policies definiert, welche regeln, welcher Endpunkt welche Charakteristiken hat. Dies sollte in die Infrastruktur ausgelagert werden und in einem Service Mesh systemweit definiert sein. Mit Proxy-Containern kann die Kommunikation ausserhalb der Applikation geregelt werden. Somit können Applikationsentwickler einfacher arbeiten ohne Implementierungsdetails der Infrastruktur.
 
 Weitere Beispiele:
 
-- File Zugriffe: Sollten via Filesystem Zugriffe innerhalb des Containers gemacht werden. Die Infrastruktur hat dann die Aufgabe, entsprechende Volume-Mounts für den Container aufzusetzen.
+- File Zugriffe: Sollten via Filesystem Zugriffe innerhalb des Containers gemacht werden und nicht via spezifische Cloud-Provider Blob SDK. Die Infrastruktur hat dann die Aufgabe, entsprechende Volume-Mounts für den Container aufzusetzen.
 - Konfigurationen: Oft werden Konfigurationen in der Startup Phase via Fremdsystem geladen. Diese sollten ausschliesslich via File Zugriffe (siehe oben) oder Umgebungsvariablen gemacht werden.
 
 **Generisches Monitoring**
