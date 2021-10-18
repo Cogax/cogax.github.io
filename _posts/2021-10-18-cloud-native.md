@@ -1,7 +1,7 @@
 ---
 title: Wieso Cloud Native?
 toc: true
-note: false
+note: true
 updated: 2021-10-18 20:27
 teaser: Der Begriff "Cloud Native" gewinnt immer mehr an Popularität. Was steckt dahinter und wieso ist Cloud Native != Cloud?
 ---
